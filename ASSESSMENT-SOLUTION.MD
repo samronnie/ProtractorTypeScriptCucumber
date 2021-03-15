@@ -95,7 +95,7 @@ Scenario: When you search for either a character or a planet and you get one or 
 
 Actual - Search results are not cleared.
 
-Expected - Search results should be cleard.
+Expected - Search results should be cleared.
 
 ````
 
