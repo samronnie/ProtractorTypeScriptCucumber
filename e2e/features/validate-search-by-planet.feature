@@ -1,6 +1,6 @@
 Feature: Validate the search results are displayed properly when searching by characters
 
-    @searchByStarWarsPlanet
+    @searchByStarWarsPlanet @Regression
     Scenario Outline: Validate details are displayed when searching using valid star wars character
 
         Given The app is open on "localhost"
