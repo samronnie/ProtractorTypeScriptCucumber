@@ -1,0 +1,57 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Check the installation of the protractor framework",
+    "line": 1,
+    "id": "check-the-installation-of-the-protractor-framework",
+    "tags": [],
+    "uri": "e2e/features/assessment-check.feature",
+    "elements": [
+      {
+        "id": "check-the-installation-of-the-protractor-framework;open-the-browser",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Open the browser",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "The app is open on \"localhost\"",
+            "match": {
+              "location": "e2e/steps/app.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3207000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "89.0.4389.82"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]
