@@ -8,11 +8,19 @@ const log = require('../config/logging.config').defaults;
 
 export class utilfunction {
 
+    /**
+     * To navigate to the specified url
+     * @param url - url to navigate
+     */
     async navigateTo(url: string) {
         await browser.get('http://' + url + ':4200/');
         log.debug('URL : ' + url + ' is sucessfully opened');
     }
 
+    /**
+     * To click on the specified element
+     * @param element - element to perform click on
+     */
     async click(element: any) {
         try {
             await browser.wait(EC.elementToBeClickable(element));
@@ -22,6 +30,12 @@ export class utilfunction {
             throw new Error(err);
         }
     };
+
+    /**
+     * To type into an input field
+     * @param element - element to type in text
+     * @param character - text to type in
+     */
 
     async type(element: any, character: string) {
 
@@ -36,6 +50,12 @@ export class utilfunction {
 
     };
 
+    /**
+     * To  validate element contains the specified text
+     * @param element - element to validate text
+     * @param character - text to verify
+     */
+
     async validateElementContainsText(element: any, character: string) {
         try {
             await browser.wait(EC.presenceOf(element));
@@ -47,6 +67,11 @@ export class utilfunction {
         }
     };
 
+    /**
+     * to verify element is present in the page
+     * @param element - element to be verfied
+     */
+
     async validateElementDisplayed(element: any) {
         try {
             await expect(element.isDisplayed()).to.eventually.be.true;
@@ -55,6 +80,12 @@ export class utilfunction {
             throw new Error(err);
         }
     };
+
+    /**
+     * To validate text is present in element
+     * @param element - element to validat the text
+     * @param message - text to be validated
+     */
 
     async validateTextPresentInElement(element: any, message: string) {
         try {
@@ -65,10 +96,18 @@ export class utilfunction {
         }
     };
 
+    /**
+     * To perform no action
+     * @param seconds - millisends to perform no action
+     */
     async browserSleep(seconds: number) {
         return browser.sleep(seconds);
     };
 
+    /**
+     * To get the number of times element is present
+     * @param element - element to get the count
+     */
 
     async size(element: any) {
         let count = 0;
@@ -80,6 +119,11 @@ export class utilfunction {
         return count;
     };
 
+    /**
+     * To validate the element count is matching as expected
+     * @param actualCount - Actual element count
+     * @param expectedCount - Expected element count
+     */
     async validateLengthOfElement(actualCount: number, expectedCount: number) {
         try {
             await expect(actualCount).to.equal(expectedCount);
