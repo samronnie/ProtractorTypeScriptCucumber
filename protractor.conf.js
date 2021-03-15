@@ -17,7 +17,7 @@ exports.config = {
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   cucumberOpts: {
     strict: true,
-    tags: '@searchByStarWarsCharacterAfterSwitch',
+    tags: '@Regression',
     require: [
       './e2e/**/*.steps.ts','./e2e/**/*.util.ts'
     ],
