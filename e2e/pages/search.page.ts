@@ -32,7 +32,7 @@ export class search {
 
         await utilFunction.type(this.searchTextBox, searchText);
         await utilFunction.click(this.buttonSearch);
-        log.debug('Entered search text');
+        log.debug('Search text is entered and search click on search button');
     }
 
     async chooseSearchByPlanet() {
@@ -51,13 +51,15 @@ export class search {
         await utilFunction.validateElementContainsText(this.searchResults, birthYear);
         await utilFunction.validateElementContainsText(this.searchResults, eyeColor);
         await utilFunction.validateElementContainsText(this.searchResults, skinColor);
+        log.debug('Validation of search results for star wars character is successful');
     }
 
     async validateResultDataPlanet(population: string, climate: string, gravity: string) {
         await utilFunction.validateElementContainsText(this.searchResults, population);
         await utilFunction.validateElementContainsText(this.searchResults, climate);
         await utilFunction.validateElementContainsText(this.searchResults, gravity);
-    
+        log.debug('Validation of search results for star wars planet is successful');
+
     }
 
 };

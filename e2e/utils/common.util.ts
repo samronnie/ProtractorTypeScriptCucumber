@@ -127,7 +127,7 @@ export class utilfunction {
     async validateLengthOfElement(actualCount: number, expectedCount: number) {
         try {
             await expect(actualCount).to.equal(expectedCount);
-            log.debug('Count Matches');
+            log.debug('Count Matches , acutal : '+ actualCount + ' with expected : ' + expectedCount);
         } catch (err) {
             throw new Error(err);
         }
