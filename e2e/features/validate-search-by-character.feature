@@ -1,6 +1,6 @@
 Feature: Validate the search results are displayed properly when searching by characters
 
-    @searchByStarWarsCharacter
+    @searchByStarWarsCharacter @Regression
     Scenario Outline: Validate details are displayed when searching using valid star wars character
 
         Given The app is open on "localhost"
@@ -15,7 +15,7 @@ Feature: Validate the search results are displayed properly when searching by ch
             | male   | 19BBY      | blue      | fair       |
 
 
-    @searchByStarWarsCharacterAfterSwitch
+    @searchByStarWarsCharacterAfterSwitch @Regression
     Scenario: Validate details are not displayed when switching to search by character after finding results from planet
 
         Given The app is open on "localhost"
